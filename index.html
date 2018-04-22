@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+    <title>Restologue - Administration</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <section class="container">
+            <a class="navbar-brand" href="#">Administration</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </nav>
+
+    <div class="app-body">
+        <div class="container">
+            <h3>Liste des cartes <button type="button" data-toggle="modal" data-target="#addCarte" class="btn btn-primary float-right">Ajouter une carte</button></h3>
+            <div class="row" id="cartes">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="showMenu" tabindex="-1" role="dialog" aria-labelledby="ShowMenu" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="menuName"></h5>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled card-text">
+                    <li>Entrée :</li>
+                    <ul>
+                        <li id="entreeName"></li>
+                        <li id="entreePrice"></li>
+                    </ul>
+                    <li>Plat :</li>
+                    <ul>
+                        <li id="platName"></li>
+                        <li id="platPrice"></li>
+                    </ul>
+                    <li>Dessert :</li>
+                    <ul>
+                        <li id="dessertName"></li>
+                        <li id="dessertPrice"></li>
+                    </ul>                                                        
+                </ul>
+            </div> 
+        </div>      
+    </div>
+
+    <div class="modal fade" id="addCarte" tabindex="-1" role="dialog" aria-labelledby="AddCarte" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ajouter une carte</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="addCarte">
+                        <div class="form-group">
+                            <label for="nameCarte">Nom de la carte</label>
+                            <input type="text" class="form-control" id="nameCarte" placeholder="Nom de la carte">
+                        </div>
+                        <button class="btn btn-primary btn-block">Ajouter une carte</button>                            
+                    </form>
+                </div>   
+            </div>         
+        </div>
+    </div>
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Connexion</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="login">
+                        <div class="form-group">
+                            <label for="username">Nom du compte</label>
+                            <input type="text" class="form-control" id="username" placeholder="Votre nom de compte">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
+                        </div>
+                        <button class="btn btn-primary btn-block">Se connecter</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>                
+ </body>
+</html>
